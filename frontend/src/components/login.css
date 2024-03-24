@@ -1,5 +1,5 @@
-/* Import shared styles (if applicable) */
-/* import './sharedStyles.css'; */
+/* General styles (if applicable) */
+/* You can add general styles for fonts, colors, etc. here */
 
 .login-form-container {
   display: flex;
@@ -13,7 +13,14 @@
   margin: 50px auto; /* Center the form horizontally */
 }
 
-.login-title {
+.login-form-container img {
+  /* Style your jobicon image here (optional) */
+  width: 100px; /* Example width */
+  height: 100px; /* Example height */
+  margin-bottom: 10px; /* Add spacing below image */
+}
+
+.login-form-container h1.login-title {
   margin-bottom: 10px;
   font-size: 2em;
   /* Assuming the font for JobSearchForm heading was 'sans-serif' */
@@ -21,64 +28,70 @@
   color: #333; /* Darker text for headings */
 }
 
-.login-subtitle {
+.login-form-container h3.login-subtitle {
   margin-bottom: 5px;
-  color: #666; /* Lighter text for subheadings */
+  color: 0; 
+  font-size: larger;/* Lighter text for subheadings */
 }
 
-.login-description {
-  margin-bottom: 10px;
+.login-form-container .login-description {
+  margin-bottom: 15px; /* Add spacing below description */
 }
 
-.login-form {
+.login-form-container form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; /* Distribute elements evenly */
 }
 
-.login-form-field {
+.login-form-container form div.login-form-field {
   margin-bottom: 10px;
   display: flex;
+  flex-direction: column; /* Changed to column for vertical stacking */
   align-items: center;
-  width: 48%; /* Set width for each form field section */
+  width: 53%; /* Set width for each form field section */
 }
 
-.login-form-label {
-  flex: 0.2;
-  margin-right: 10px;
+.login-form-container form label.login-form-label {
+  margin-bottom: 5px; /* Add spacing below labels */
   color: #333; /* Darker text for labels */
 }
 
-.login-form-input {
+.login-form-container form input[type="text"],
+.login-form-container form input[type="email"],
+.login-form-container form input[type="password"] {
   flex: 1;
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 9px; /* Consistent border radius */
+  background-color: aqua; /* Aqua background color */
 }
 
-.login-form-button {
-  background-color: #4CAF50; /* Green button */
+.login-form-container form button.login-form-button {
+  background-color: blue; /* Blue button */
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 4px; /* Consistent border radius */
   cursor: pointer;
   width: 100%; /* Make button full width */
 }
 
-.login-form-button:hover {
-  background-color: #3e8e41;
+.login-form-container form button.login-form-button:hover {
+  background-color: #4CAF50; /* Green on hover */
 }
 
-.login-form-link {
-  margin-top: 10px;
-  text-align: center; /* Center the links within the link section */
+.login-form-container .login-form-link {
+  margin-top: 10px; /* Add spacing above link */
+  text-align: center; /* Center the link text */
 }
 
-.login-form-link p {
-  margin-bottom: 5px;
+.login-form-container .login-form-link a {
+  color: #5210ec; /* Darker text for links */
 }
 
-.login-form-link a {
-  color: #333; /* Darker text for links */
+@media only screen and (max-width: 768px) {
+  .signup-form-container {
+    width: 50%; /* Adjust width for smaller screens */
+  }
 }

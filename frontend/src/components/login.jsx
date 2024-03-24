@@ -24,14 +24,31 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+
+    if (username === '' || email === '' || password === '') {
+      alert("Unable to login, Please input all the details.");
+      return;
+    }
+
+
+
+
+
     try {
       await login({ username, email, password})
       // const response = await axios.post("http://localhost:9000/login", { username, email, password}, { withCredentials: true})
       return navigate("/jobsearch")
     } catch (error) {
-      console.error(error)
+      console.error("user  does not exist")
+      alert("user does not exist")
     }
+
+    
+
+
   };
+  
 
   return (
     
@@ -50,6 +67,7 @@ const LoginForm = () => {
             type="text"
             name="username"
             value={username}
+            
             onChange={(e) => setUsername(e.target.value)}
             className="login-form-input"
           />
@@ -65,7 +83,8 @@ const LoginForm = () => {
           />
        </div>
         <div className="login-form-field">
-          <label htmlFor="password" className="login-form-label">Password</label>
+          <p>password</p>
+          {/* <label htmlFor="password" className="login-form-label">Password</label> */}
           <input
             type="password"
             name="password"
@@ -79,7 +98,7 @@ const LoginForm = () => {
           </div>
       </Form>
       
-      <div className="login-form-link">
+      {/* <div className="login-form-link">
         <p>Login as</p>
           <button type="submit" className="login-form-button"><Link to="/jobsearch">recruitee</Link></button>
           </div>
@@ -87,7 +106,7 @@ const LoginForm = () => {
   
         <button className="login-form-button"><Link to="/jobsearch" >recruiter</Link></button>
           
-        </div>
+        </div> */}
         <div className="login-form-link">
         Don't have an account?<Link to="/signup" className="login-form-link">Sign up</Link>
       </div>

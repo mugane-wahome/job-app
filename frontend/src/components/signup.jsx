@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./signup.css";
 import axios from "axios";
+import jobicon from '../assets/jobicon.png';
 
 const SignUpForm = () => {
   const [name, setName] = useState("");
@@ -11,6 +12,12 @@ const SignUpForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (name === '' || email === '' || password === '') {
+      alert("Unable to create account, Please input all the details.");
+      return;
+    }
+
     await axios.post("http://localhost:9000/signup", { name, email, password });
     navigate("/login");
 
@@ -18,6 +25,7 @@ const SignUpForm = () => {
 
   return (
     <div className="signup-form-container">
+      <img src={jobicon} alt="" />
       <h1>PATAJOB</h1>
       <h3>Create an account</h3>
       <form onSubmit={handleSubmit}>
