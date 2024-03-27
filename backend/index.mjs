@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 import session from "express-session";
 import resumeRouter from "./routes/resume.js";
 import postRouter from "./routes/jobs.js";
-
+import uploads_router from "./routes/appliedjobs.js";
 
 dotenv.config();
 const prisma = new PrismaClient();
@@ -36,8 +36,9 @@ app.use(
 
 
 app.use(userRouter);
-app.use(resumeRouter);
+// app.use(resumeRouter);
 app.use(postRouter)
+app.use(uploads_router)
 
 
 const port = 9000;

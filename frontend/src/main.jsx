@@ -15,6 +15,7 @@ import Jobpostingform from "./components/jobpostingform";
 import JobDetails from "./components/jobdetails";
 import AppliedJobs from "./components/appliedjobs";
 import { AuthContextProvider } from "./context/contextAuth";
+import Companies from "./components/companies";
 
 // import jobpostingform from "./fron/components/recruitee/jobpostingform";
 const router = createBrowserRouter([
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
     path: "/AppliedJobs",
     element: <AppliedJobs />,
   },
+
+  {
+    path: "/companies",
+    element: <Companies />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

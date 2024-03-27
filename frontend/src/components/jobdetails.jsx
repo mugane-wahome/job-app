@@ -48,6 +48,8 @@ const JobDetails = () => {
     fetchJobDetails();
   }, [jobId]);
 
+  console.log({ resume})
+
   return (
     <div className="job-details">
       <h1 className="job-details-title">Job Details</h1>

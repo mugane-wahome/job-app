@@ -25,7 +25,7 @@ const Homepage = () => {
 
       <img src={jobicon} alt="Logo" />
       <header className="header">
-        {/* <img src={jobicon} alt="Logo" /> */}
+   
         <h1>PATAJOB</h1>
       </header>
     

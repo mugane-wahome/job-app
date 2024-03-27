@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import jobicon from "../assets/jobicon.png";
 import axios from "axios";
 import "./jobsearch.css";
+import Companies  from "./companies";
 // import { useContext} from "react";
 
 const JobSearchForm = () => {
@@ -73,6 +74,11 @@ const JobSearchForm = () => {
     setFilterJobs(filteredJobs);
   };
 
+
+  const handleCompany = () => {
+    return navigate("/companies");
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -106,6 +112,9 @@ const JobSearchForm = () => {
         <button className="level-button1" onClick={() => navigate("/homepage")}>
           Back to Job Search
         </button>
+
+
+        <button  className="level-button1" onClick={() => navigate("/companies")}>Companies</button>
 
         {currentUser && (
           <>

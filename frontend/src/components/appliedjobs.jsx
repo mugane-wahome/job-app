@@ -9,11 +9,10 @@ const FileInput = ({ onFileSelect, required }) => {
       formData.append("file", resume);
       const response = await fetch("http://localhost:9000/resume", {
         body: formData,
-
+        credentials: "include",
         method: "post",
       });
       const data = await response.json();
-      console.log({ data });
       if (data.status === "success") {
         onFileSelect(data.filePath);
       }

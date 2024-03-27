@@ -123,4 +123,16 @@ body {
   .dropdown:hover .dropdown-content {
     display: block; /* Show dropdown content on hover */
   }
-  
+  .company {
+  flex-basis: calc(25% - 20px); /* Set the initial size for each company card */
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.company:hover {
+  background-color: #f8f9fa; /* Change the background color when hovered */
+}
