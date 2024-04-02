@@ -66,7 +66,7 @@ h4 {
 }
 
 .submit button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; 
   color: white;
   padding: 0.8rem 1rem;
   border: none;
@@ -76,7 +76,7 @@ h4 {
 }
 
 .submit button:hover {
-  background-color: #3e8e41; /* Darker green on hover */
+  background-color: #3e8e41; 
 }
 
 .message {
@@ -94,19 +94,19 @@ h4 {
 }
 
 .job {
-  background-color: bisque; /* Light gray background */
+  background-color: bisque; 
   padding: 10px;
   border-radius: 4px;
   margin: 0.5rem;
   border-radius: 20px;
-  width: calc(25% - 1.5rem); /* Adjust based on desired number of jobs per row */
-  cursor: pointer; /* Indicate hover effect for clickable jobs */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: calc(25% - 1.5rem); 
+  cursor: pointer; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
   transition: background-color 0.2s ease-in-out;
 }
 
 .job:hover {
-  background-color: blue; /* Slightly darker on hover */
+  background-color: blue; 
 }
 
 .job h3 {
@@ -114,7 +114,7 @@ h4 {
 }
 
 .level0-button{
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; 
   color: white;
   padding: 0.8rem 1rem;
   border: none;
@@ -124,11 +124,11 @@ h4 {
 }
 
 .level-button0:hover {
-  background-color:blue; /* Darker green on hover */
+  background-color:blue; 
 }
 
 .level1-button{
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; 
   color: white;
   padding: 0.8rem 1rem;
   border: none;
@@ -137,5 +137,5 @@ h4 {
   transition: background-color 0.2s ease-in-out;
 }
 .level-button1:hover {
-  background-color:blue; /* Darker green on hover */
+  background-color:blue; 
 }
