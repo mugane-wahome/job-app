@@ -140,7 +140,7 @@ h4 {
   background-color:blue; 
 }
 
-/* .level1-button{
+.level1-button{
   background-color: #4CAF50; 
   color: white;
   padding: 0.8rem 1rem;
@@ -148,4 +148,4 @@ h4 {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
-} */
+}
